@@ -1,0 +1,251 @@
+:root {
+    --primario: #84f779;
+    --secundario: #cdd6d4;
+    --oscuro: #16302d;
+    --claro: #ffffff;
+    --gris: #cbdad6;
+    --peligro: #fa675f;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--oscuro);
+    background: #f4f7f6;
+}
+.encabezado {
+    min-height: 220px;
+    padding: 40px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--claro);
+    background: linear-gradient(135deg, #004d40, #00a896);
+}
+.encabezado h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+.encabezado p {
+    margin: 0;
+}
+.contenedor {
+    width: min(1100px, 90%);
+    margin: 30px auto;
+}
+.controles {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+.controles input,
+.controles select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c5c2;
+    border-radius: 10px;
+    background: white;
+    font-size: 1rem;
+}
+.controles input:focus,
+.controles select:focus {
+    outline: 3px solid #00695c25;
+    border-color: var(--primario);
+}
+.estado {
+    color: var(--gris);
+    margin: 15px 0;
+}
+button {
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.tarjeta {
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--claro);
+    box-shadow: 0 4px 12px #00000018;
+    transition: transform 0.2s;
+}
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+.imagen {
+    min-height: 125px;
+    display: grid;
+    place-items: center;
+    background: var(--secundario);
+    font-size: 3.5rem;
+}
+.informacion {
+    padding: 18px;
+}
+.categoria {
+    color: var(--primario);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.tarjeta input[type="number"] {
+    width: 75px;
+    padding: 8px;
+    margin: 10px 0;
+}
+.btn-reservar {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    background: var(--primario);
+}
+.resumen {
+    margin-top: 35px;
+    padding: 25px;
+    background: rgb(255, 255, 255);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #00000018;
+}
+.item-reserva {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.item-reserva p {
+    margin: 5px 0;
+}
+.btn-eliminar {
+    color: white;
+    background: var(--peligro);
+    margin-top: 8px;
+}
+.total {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.sin-resultados {
+    grid-column: 1/-1;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 14px;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: var(--oscuro);
+}
+@media (max-width: 850px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .controles {
+        grid-template-columns: 1fr 1fr;
+    }
+    #buscador {
+        grid-column: 1/-1;
+    }
+}
+@media (max-width: 550px) {
+    .catalogo,
+    .controles {
+        grid-template-columns: 1fr;
+    }
+    #buscador {
+        grid-column: auto;
+    }
+    .encabezado {
+        min-height: 180px;
+        padding: 30px 5%;
+    }
+    .item-reserva {
+        flex-direction: column;
+    }
+}
+
+/* ---------- RETO: estilos nuevos ---------- */
+[hidden] {
+    display: none;
+}
+button:focus-visible {
+    outline: 3px solid var(--primario);
+    outline-offset: 2px;
+}
+.mensaje {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.mensaje:empty {
+    display: none;
+}
+.mensaje.error {
+    color: var(--peligro);
+    background: #fdecea;
+}
+.mensaje.exito {
+    color: var(--primario);
+    background: var(--secundario);
+}
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+.btn-cantidad {
+    color: white;
+    background: var(--primario);
+    padding: 6px 12px;
+}
+.total-personas {
+    text-align: right;
+    font-weight: bold;
+}
+.btn-vaciar {
+    color: white;
+    background: var(--peligro);
+    margin-top: 10px;
+}
+.btn-cancelar {
+    background: #ddd;
+    margin-left: 8px;
+}
+.confirmacion {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fdecea;
+    border-radius: 10px;
+}
+
+/* RETO: 4 controles (buscador, categoría, orden y precio) en una sola línea */
+.controles {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+@media (max-width: 850px) {
+    .controles {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 550px) {
+    .controles {
+        grid-template-columns: 1fr;
+    }
+}
