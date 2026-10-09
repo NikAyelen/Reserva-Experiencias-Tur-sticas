@@ -8,5 +8,10 @@
  {"id":7,"nombre":"Temazcal tradicional","categoria":"bienestar","precio":520,"cupo":10,"icono":"🔥"},
  {"id":8,"nombre":"Masaje en spa maya","categoria":"bienestar","precio":900,"cupo":6,"icono":"💆"},
  {"id":9,"nombre":"Snorkel en arrecife","categoria":"aventura","precio":590,"cupo":14,"icono":"🤿"},
- {"id":10,"nombre":"Taller de cerámica","categoria":"cultura","precio":380,"cupo":12,"icono":"🏺"}
+ {"id":10,"nombre":"Taller de cerámica","categoria":"cultura","precio":380,"cupo":12,"icono":"🏺"},
+ {"id":11,"nombre":"Trekking en selva","categoria":"aventura","precio":650,"cupo":10,"icono":"🌲"},
+ {"id":12,"nombre":"Paseo en bicicleta","categoria":"aventura","precio":400,"cupo":15,"icono":"🚴"},
+ {"id":13,"nombre":"Clase de cocina tradicional","categoria":"gastronomia","precio":550,"cupo":10,"icono":"👩‍🍳"},
+ {"id":14,"nombre":"Observación de aves","categoria":"naturaleza","precio":300,"cupo":12,"icono":"🦜"},
+ {"id":15,"nombre":"Visita a cenotes secretos","categoria":"naturaleza","precio":700,"cupo":8,"icono":"🏞️"}
 ]
